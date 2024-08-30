@@ -45,8 +45,11 @@ const infrastructureDatabaseModule = (databaseConfig() as DatabaseConfig)
     });
 // </database-block>
 
+import { ReportsModule } from './reports/reports.module';
+
 @Module({
   imports: [
+    ReportsModule,
     ConfigModule.forRoot({
       isGlobal: true,
       load: [
